@@ -30,15 +30,15 @@ export default function WhyChooseUs({ onOpenQuote }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-moss/10 text-forest-moss text-xs font-bold uppercase tracking-wider mb-3 border border-forest-moss/20">
             <span>The ChanLogix Benchmark</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151615] tracking-tight">
-            Why Leading Enterprises <br />
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#151615] tracking-tight">
+            Why Leading Enterprises <br className="hidden sm:inline" />
             <span className="text-forest-moss">Rely on ChanLogix Worldwide</span>
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-[#555A54] font-normal leading-relaxed">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-lg text-[#555A54] font-normal leading-relaxed">
             By fusing proprietary AI routing intelligence, licensed customs brokerage, and an agile multi-modal network, we eliminate friction from international shipping.
           </p>
         </div>
@@ -78,47 +78,47 @@ export default function WhyChooseUs({ onOpenQuote }) {
         </div>
 
         {/* Interactive Comparison Matrix in Clean Light Theme */}
-        <div className="bg-white rounded-3xl p-6 sm:p-10 text-[#151615] shadow-xl relative overflow-hidden border border-[#AFAEAE]/50">
+        <div className="bg-white rounded-3xl p-5 sm:p-10 text-[#151615] shadow-xl relative overflow-hidden border border-[#AFAEAE]/50">
           <div className="absolute top-0 right-0 w-96 h-96 bg-forest-moss/5 rounded-full blur-3xl pointer-events-none"></div>
 
-          <div className="max-w-3xl mb-8">
-            <span className="text-xs uppercase font-bold tracking-widest text-forest-moss block mb-2">
+          <div className="max-w-3xl mb-6 sm:mb-8">
+            <span className="text-xs uppercase font-bold tracking-widest text-forest-moss block mb-2 font-mono">
               Performance Comparison
             </span>
-            <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-[#151615]">
+            <h3 className="text-xl sm:text-3xl font-extrabold tracking-tight text-[#151615]">
               The ChanLogix Intelligence Advantage
             </h3>
-            <p className="text-sm text-[#555A54] font-normal mt-2">
+            <p className="text-xs sm:text-sm text-[#555A54] font-normal mt-2">
               See how our agile tech-first logistics infrastructure outpaces conventional freight forwarders.
             </p>
           </div>
 
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-sm border-collapse min-w-[600px]">
+          <div className="-mx-5 px-5 sm:mx-0 sm:px-0 overflow-x-auto">
+            <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[560px]">
               <thead>
-                <tr className="border-b border-[#AFAEAE]/40 text-xs uppercase tracking-wider text-[#555A54] bg-[#F4F7F2]">
-                  <th className="py-4 px-4 font-bold text-[#151615]">Capability / Metric</th>
-                  <th className="py-4 px-4 font-extrabold text-forest-moss bg-[#EEF5E6] rounded-t-lg border-t-2 border-x border-forest-moss">
+                <tr className="border-b border-[#AFAEAE]/40 text-[11px] sm:text-xs uppercase tracking-wider text-[#555A54] bg-[#F4F7F2]">
+                  <th className="py-3.5 px-3.5 sm:py-4 sm:px-4 font-bold text-[#151615]">Capability / Metric</th>
+                  <th className="py-3.5 px-3.5 sm:py-4 sm:px-4 font-extrabold text-forest-moss bg-[#EEF5E6] rounded-t-lg border-t-2 border-x border-forest-moss">
                     ChanLogix Global
                   </th>
-                  <th className="py-4 px-4 font-semibold text-[#555A54]">Traditional Couriers</th>
+                  <th className="py-3.5 px-3.5 sm:py-4 sm:px-4 font-semibold text-[#555A54]">Traditional Couriers</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#AFAEAE]/30">
                 {COMPARISON_DATA.map((row, index) => (
                   <tr key={index} className="hover:bg-[#F8FAF7] transition-colors">
-                    <td className="py-4 px-4 font-bold text-[#151615]">
+                    <td className="py-3.5 px-3.5 sm:py-4 sm:px-4 font-bold text-[#151615]">
                       {row.feature}
                     </td>
-                    <td className="py-4 px-4 text-forest-moss font-bold bg-[#EEF5E6]/70 border-x border-forest-moss/30">
+                    <td className="py-3.5 px-3.5 sm:py-4 sm:px-4 text-forest-moss font-bold bg-[#EEF5E6]/70 border-x border-forest-moss/30">
                       <div className="flex items-center gap-2">
-                        <FaCheckCircle className="text-forest-moss w-4 h-4 shrink-0" />
+                        <FaCheckCircle className="text-forest-moss w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
                         <span>{row.chanlogix}</span>
                       </div>
                     </td>
-                    <td className="py-4 px-4 text-[#7A8278] font-normal">
+                    <td className="py-3.5 px-3.5 sm:py-4 sm:px-4 text-[#7A8278] font-normal">
                       <div className="flex items-center gap-2">
-                        <FaTimesCircle className="text-rose-400 w-4 h-4 shrink-0" />
+                        <FaTimesCircle className="text-rose-400 w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
                         <span>{row.traditional}</span>
                       </div>
                     </td>
@@ -128,13 +128,13 @@ export default function WhyChooseUs({ onOpenQuote }) {
             </table>
           </div>
 
-          <div className="mt-8 pt-6 border-t border-[#AFAEAE]/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-[#AFAEAE]/30 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
             <div className="text-xs text-[#555A54] font-medium text-center sm:text-left">
               Need a tailored commercial supply chain proposal for your enterprise?
             </div>
             <button
               onClick={onOpenQuote}
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider text-white bg-gradient-to-r from-forest-moss to-sage-green hover:from-forest-mossHover hover:to-sage-hover shadow-md shadow-forest-moss/20 transition-all duration-200"
+              className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider text-white bg-gradient-to-r from-forest-moss to-sage-green hover:from-forest-mossHover hover:to-sage-hover shadow-md shadow-forest-moss/20 transition-all duration-200 cursor-pointer"
             >
               <span>Schedule Commercial Review</span>
               <FaBolt className="text-white w-3.5 h-3.5" />

@@ -91,62 +91,63 @@ export default function Footer({ onOpenQuote, showToast }) {
             </div>
           </div>
 
-          {/* Column 2: Company */}
-          <div className="lg:col-span-2">
-            <h4 className="text-[15px] font-normal text-white mb-4 tracking-normal">
-              Company
-            </h4>
-            <ul className="space-y-2.5 text-[13px] text-white/70">
-              <li>
-                <a href="#home" className="hover:text-white transition-colors">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#network" className="hover:text-white transition-colors">
-                  Global Network
-                </a>
-              </li>
-              <li>
-                <a href="#insights" className="hover:text-white transition-colors">
-                  Insights & Scale
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="hover:text-white transition-colors">
-                  Operating Hubs
-                </a>
-              </li>
-            </ul>
-          </div>
+          {/* Column 2 & 3: Company and Services side-by-side on mobile, 2 cols on desktop */}
+          <div className="col-span-1 md:col-span-2 lg:col-span-4 grid grid-cols-2 gap-6 sm:gap-8">
+            <div>
+              <h4 className="text-[14px] sm:text-[15px] font-normal text-white mb-3.5 tracking-normal">
+                Company
+              </h4>
+              <ul className="space-y-2.5 text-[12.5px] sm:text-[13px] text-white/70">
+                <li>
+                  <a href="#home" className="hover:text-white transition-colors">
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a href="#network" className="hover:text-white transition-colors">
+                    Global Network
+                  </a>
+                </li>
+                <li>
+                  <a href="#insights" className="hover:text-white transition-colors">
+                    Insights & Scale
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" className="hover:text-white transition-colors">
+                    Operating Hubs
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-          {/* Column 3: Services */}
-          <div className="lg:col-span-2">
-            <h4 className="text-[15px] font-normal text-white mb-4 tracking-normal">
-              Services
-            </h4>
-            <ul className="space-y-2.5 text-[13px] text-white/70">
-              <li>
-                <a href="#services" className="hover:text-white transition-colors">
-                  Express Courier
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-white transition-colors">
-                  Air & Ocean Cargo
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-white transition-colors">
-                  Smart Warehousing
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-white transition-colors">
-                  Customs Clearance
-                </a>
-              </li>
-            </ul>
+            <div>
+              <h4 className="text-[14px] sm:text-[15px] font-normal text-white mb-3.5 tracking-normal">
+                Services
+              </h4>
+              <ul className="space-y-2.5 text-[12.5px] sm:text-[13px] text-white/70">
+                <li>
+                  <a href="#services" className="hover:text-white transition-colors">
+                    Express Courier
+                  </a>
+                </li>
+                <li>
+                  <a href="#services" className="hover:text-white transition-colors">
+                    Air & Ocean Cargo
+                  </a>
+                </li>
+                <li>
+                  <a href="#services" className="hover:text-white transition-colors">
+                    Smart Warehousing
+                  </a>
+                </li>
+                <li>
+                  <a href="#services" className="hover:text-white transition-colors">
+                    Customs Clearance
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* Column 4: SIGN UP AND SAVE */}

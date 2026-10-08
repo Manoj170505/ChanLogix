@@ -17,10 +17,10 @@ export default function Toast({ toast, onClose }) {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 max-w-md animate-bounce-in transition-all">
-      <div className={`flex items-start gap-3 p-4 rounded-xl border backdrop-blur-md shadow-2xl ${bgColors[toast.type || 'info']}`}>
+    <div className="fixed bottom-4 sm:bottom-6 left-3 right-3 sm:left-auto sm:right-6 z-50 max-w-md mx-auto sm:mx-0 animate-bounce-in transition-all">
+      <div className={`flex items-start gap-3 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border backdrop-blur-md shadow-2xl ${bgColors[toast.type || 'info']}`}>
         {icons[toast.type || 'info']}
-        <div className="flex-1 pr-2">
+        <div className="flex-1 pr-1 sm:pr-2">
           {toast.title && <h4 className="font-semibold text-sm mb-0.5">{toast.title}</h4>}
           <p className="text-xs text-slate-200 leading-relaxed">{toast.message}</p>
         </div>

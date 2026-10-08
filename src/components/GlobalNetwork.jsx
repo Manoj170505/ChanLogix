@@ -27,7 +27,7 @@ export default function GlobalNetwork() {
   ];
 
   return (
-    <section id="about" className="relative bg-[#090B0E] text-white py-20 sm:py-28 lg:py-32 border-b border-[#1A1D24] scroll-mt-20 overflow-hidden">
+    <section id="about" className="relative bg-[#090B0E] text-white py-16 sm:py-24 lg:py-32 border-b border-[#1A1D24] scroll-mt-20 overflow-hidden">
       <div id="network" className="absolute -top-24"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,12 +35,12 @@ export default function GlobalNetwork() {
         {/* ========================================================= */}
         {/* SECTION HEADER: Headline & Description                     */}
         {/* ========================================================= */}
-        <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20 lg:mb-24">
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1] mb-5">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16 lg:mb-20">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1] mb-3 sm:mb-4">
             Global Network
           </h2>
 
-          <p className="text-base sm:text-lg text-gray-300 leading-relaxed font-normal">
+          <p className="text-xs sm:text-base lg:text-lg text-gray-300 leading-relaxed font-normal">
             Connect with teams and clients worldwide. Our platform enables seamless collaboration across continents, bringing the world to your workspace.
           </p>
         </div>
@@ -48,7 +48,7 @@ export default function GlobalNetwork() {
         {/* ========================================================= */}
         {/* 3D INTERACTIVE GLOBE CENTERPIECE (Dark Mode Earth)       */}
         {/* ========================================================= */}
-        <div className="relative w-full max-w-[520px] sm:max-w-[580px] lg:max-w-[640px] aspect-square mx-auto flex items-center justify-center my-4 sm:my-8">
+        <div className="relative w-full max-w-[280px] xs:max-w-[340px] sm:max-w-[480px] lg:max-w-[620px] aspect-square mx-auto flex items-center justify-center my-2 sm:my-6">
           
           {/* Glowing Atmospheric Aura behind Globe */}
           <div className="absolute inset-0 bg-gradient-to-tr from-forest-moss/25 via-forest-moss/10 to-transparent rounded-full blur-3xl pointer-events-none" />
@@ -75,14 +75,14 @@ export default function GlobalNetwork() {
         {/* ========================================================= */}
         {/* NETWORK METRIC TEXTS (Static, Clean, Dark Styled)        */}
         {/* ========================================================= */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 lg:gap-14 max-w-4xl mx-auto mt-16 sm:mt-20 lg:mt-24 text-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-14 max-w-4xl mx-auto mt-10 sm:mt-16 lg:mt-20 text-center">
           
           {/* Item 1 */}
           <div className="flex flex-col items-center">
-            <div className="w-9 h-9 rounded-xl bg-forest-moss/15 text-forest-moss flex items-center justify-center mb-3 border border-forest-moss/20">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-forest-moss/15 text-forest-moss flex items-center justify-center mb-2.5 sm:mb-3 border border-forest-moss/20">
               <Globe2 className="w-4 h-4" />
             </div>
-            <h3 className="text-base font-extrabold text-white mb-1.5">
+            <h3 className="text-sm sm:text-base font-extrabold text-white mb-1">
               150+ Direct Gateway Ports
             </h3>
             <p className="text-xs sm:text-sm text-gray-400 leading-relaxed max-w-xs">
@@ -92,10 +92,10 @@ export default function GlobalNetwork() {
 
           {/* Item 2 */}
           <div className="flex flex-col items-center">
-            <div className="w-9 h-9 rounded-xl bg-forest-moss/15 text-forest-moss flex items-center justify-center mb-3 border border-forest-moss/20">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-forest-moss/15 text-forest-moss flex items-center justify-center mb-2.5 sm:mb-3 border border-forest-moss/20">
               <Zap className="w-4 h-4" />
             </div>
-            <h3 className="text-base font-extrabold text-white mb-1.5">
+            <h3 className="text-sm sm:text-base font-extrabold text-white mb-1">
               Active Freight Arcs
             </h3>
             <p className="text-xs sm:text-sm text-gray-400 leading-relaxed max-w-xs">
@@ -105,10 +105,10 @@ export default function GlobalNetwork() {
 
           {/* Item 3 */}
           <div className="flex flex-col items-center">
-            <div className="w-9 h-9 rounded-xl bg-forest-moss/15 text-forest-moss flex items-center justify-center mb-3 border border-forest-moss/20">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-forest-moss/15 text-forest-moss flex items-center justify-center mb-2.5 sm:mb-3 border border-forest-moss/20">
               <ShieldCheck className="w-4 h-4" />
             </div>
-            <h3 className="text-base font-extrabold text-white mb-1.5">
+            <h3 className="text-sm sm:text-base font-extrabold text-white mb-1">
               Zero Demurrage Guarantee
             </h3>
             <p className="text-xs sm:text-sm text-gray-400 leading-relaxed max-w-xs">
@@ -119,8 +119,8 @@ export default function GlobalNetwork() {
         </div>
 
         {/* Interaction Hint */}
-        <p className="text-center text-xs text-gray-500 font-medium mt-12 flex items-center justify-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-forest-moss animate-ping" />
+        <p className="text-center text-[11px] sm:text-xs text-gray-400 font-medium mt-8 sm:mt-12 flex items-center justify-center gap-2 px-2">
+          <span className="w-2 h-2 rounded-full bg-forest-moss animate-ping shrink-0" />
           <span>Drag to rotate globe • Interactive real-time trade route telematics</span>
         </p>
 

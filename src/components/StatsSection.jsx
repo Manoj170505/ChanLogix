@@ -112,11 +112,11 @@ export default function StatsSection() {
             </div>
 
             {/* Right Column: 2-Column Capability Pill Badges */}
-            <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2.5">
+            <div className="lg:col-span-3 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-1 gap-2 sm:gap-2.5">
               {capabilityTags.map((tag) => (
                 <div
                   key={tag}
-                  className="px-4 py-2.5 rounded-full bg-white border border-gray-200/90 text-[#151615] text-xs sm:text-sm font-semibold text-center shadow-sm hover:border-forest-moss/40 hover:text-forest-moss hover:bg-forest-mossLight/40 transition-colors whitespace-nowrap"
+                  className="px-3 py-2 sm:px-4 sm:py-2.5 rounded-full bg-white border border-gray-200/90 text-[#151615] text-[11px] sm:text-xs md:text-sm font-semibold text-center shadow-xs hover:border-forest-moss/40 hover:text-forest-moss hover:bg-forest-mossLight/40 transition-colors leading-tight"
                 >
                   {tag}
                 </div>
@@ -131,32 +131,34 @@ export default function StatsSection() {
       {/* ========================================================= */}
       {/* BOTTOM HALF: BLACK THEME (10-Card Photo & Metric Mosaic)   */}
       {/* ========================================================= */}
-      <div className="bg-[#090B0E] text-white py-14 sm:py-18 lg:py-20 border-b border-[#1A1D23]">
+      <div className="bg-[#090B0E] text-white py-12 sm:py-18 lg:py-20 border-b border-[#1A1D23]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="space-y-4 sm:space-y-5">
+          <div className="space-y-3 sm:space-y-4 lg:space-y-5">
             
             {/* Row 1 (5 Cards: Cargo Plane, Stat, Truck, Stat, Ship) */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 lg:gap-5">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-4 lg:gap-5">
               {row1.map((item, index) => (
                 <div
                   key={`r1-${index}`}
-                  className="h-44 sm:h-48 lg:h-52 rounded-2xl sm:rounded-3xl overflow-hidden bg-[#131518] border border-white/10 shadow-xl relative flex flex-col justify-center items-center text-center p-4 group transition-colors hover:border-forest-moss/40"
+                  className={`h-36 xs:h-40 sm:h-48 lg:h-52 rounded-xl xs:rounded-2xl sm:rounded-3xl overflow-hidden bg-[#131518] border border-white/10 shadow-xl relative flex flex-col justify-center items-center text-center p-3 sm:p-4 group transition-colors hover:border-forest-moss/40 ${
+                    index === 4 ? 'col-span-2 sm:col-span-1 lg:col-span-1' : ''
+                  }`}
                 >
                   {item.type === 'image' ? (
                     <img
                       src={item.src}
                       alt={item.alt}
-                      className="w-full h-full object-cover rounded-2xl sm:rounded-3xl"
+                      className="w-full h-full object-cover rounded-xl xs:rounded-2xl sm:rounded-3xl"
                       loading="lazy"
                     />
                   ) : (
                     <div className="flex flex-col items-center justify-center">
-                      <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+                      <div className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
                         {item.value}
                         <span className="text-forest-moss ml-0.5 font-bold">{item.suffix}</span>
                       </div>
-                      <div className="text-xs sm:text-sm text-gray-400 font-medium mt-2 max-w-[130px] leading-snug">
+                      <div className="text-[11px] sm:text-xs lg:text-sm text-gray-400 font-medium mt-1.5 sm:mt-2 max-w-[130px] leading-snug">
                         {item.label}
                       </div>
                     </div>
@@ -166,26 +168,28 @@ export default function StatsSection() {
             </div>
 
             {/* Row 2 (5 Cards: Stat, Warehouse, Stat, Harbor Port, Stat) */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 lg:gap-5">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-4 lg:gap-5">
               {row2.map((item, index) => (
                 <div
                   key={`r2-${index}`}
-                  className="h-44 sm:h-48 lg:h-52 rounded-2xl sm:rounded-3xl overflow-hidden bg-[#131518] border border-white/10 shadow-xl relative flex flex-col justify-center items-center text-center p-4 group transition-colors hover:border-forest-moss/40"
+                  className={`h-36 xs:h-40 sm:h-48 lg:h-52 rounded-xl xs:rounded-2xl sm:rounded-3xl overflow-hidden bg-[#131518] border border-white/10 shadow-xl relative flex flex-col justify-center items-center text-center p-3 sm:p-4 group transition-colors hover:border-forest-moss/40 ${
+                    index === 4 ? 'col-span-2 sm:col-span-1 lg:col-span-1' : ''
+                  }`}
                 >
                   {item.type === 'image' ? (
                     <img
                       src={item.src}
                       alt={item.alt}
-                      className="w-full h-full object-cover rounded-2xl sm:rounded-3xl"
+                      className="w-full h-full object-cover rounded-xl xs:rounded-2xl sm:rounded-3xl"
                       loading="lazy"
                     />
                   ) : (
                     <div className="flex flex-col items-center justify-center">
-                      <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+                      <div className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
                         {item.value}
                         <span className="text-forest-moss ml-0.5 font-bold">{item.suffix}</span>
                       </div>
-                      <div className="text-xs sm:text-sm text-gray-400 font-medium mt-2 max-w-[130px] leading-snug">
+                      <div className="text-[11px] sm:text-xs lg:text-sm text-gray-400 font-medium mt-1.5 sm:mt-2 max-w-[130px] leading-snug">
                         {item.label}
                       </div>
                     </div>

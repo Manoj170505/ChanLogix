@@ -215,7 +215,7 @@ Dispatched via ChanLogix Portal (${COMPANY_INFO.email})`;
         {/* EDITORIAL MULTI-STEP FORM (Website Light Theme & Forest Moss) */}
         {/* ========================================================= */}
         <div 
-          className="rounded-[32px] sm:rounded-[40px] bg-white text-[#151615] p-8 sm:p-12 lg:p-16 shadow-[0_20px_60px_rgba(71,133,1,0.06),0_4px_20px_rgba(0,0,0,0.03)] border border-[#DCE4D8] min-h-[580px] lg:min-h-[620px] flex flex-col justify-between relative transition-all duration-300"
+          className="rounded-[24px] sm:rounded-[36px] lg:rounded-[40px] bg-white text-[#151615] p-5 xs:p-7 sm:p-10 lg:p-16 shadow-[0_20px_60px_rgba(71,133,1,0.06),0_4px_20px_rgba(0,0,0,0.03)] border border-[#DCE4D8] min-h-[520px] lg:min-h-[620px] flex flex-col justify-between relative transition-all duration-300"
           style={{
             backgroundImage: 'radial-gradient(#DCE5D8 1.2px, transparent 1.2px)',
             backgroundSize: '10px 10px'
@@ -230,10 +230,10 @@ Dispatched via ChanLogix Portal (${COMPANY_INFO.email})`;
                 {/* --------------------------------------------------- */}
                 {/* LEFT COLUMN: Category Tag, Big Headline, Prev Link */}
                 {/* --------------------------------------------------- */}
-                <div className="lg:col-span-5 flex flex-col justify-between h-full min-h-[180px] lg:min-h-[260px]">
+                <div className="lg:col-span-5 flex flex-col justify-between h-full min-h-[140px] sm:min-h-[180px] lg:min-h-[260px]">
                   <div>
                     {/* Website Forest Moss Green Tag */}
-                    <span className="text-[11px] sm:text-xs font-bold tracking-[0.2em] text-forest-moss uppercase block mb-5 sm:mb-6 font-mono">
+                    <span className="text-[11px] sm:text-xs font-bold tracking-[0.2em] text-forest-moss uppercase block mb-3 sm:mb-6 font-mono">
                       {currentStep === 1 && 'INQUIRY TYPE'}
                       {currentStep === 2 && 'YOUR INFORMATION'}
                       {currentStep === 3 && 'YOUR SHIPMENT'}
@@ -241,7 +241,7 @@ Dispatched via ChanLogix Portal (${COMPANY_INFO.email})`;
                     </span>
 
                     {/* Headline in crisp high-contrast editorial typography */}
-                    <h2 className="text-2xl sm:text-3xl lg:text-[34px] xl:text-[38px] font-normal text-[#151615] tracking-tight leading-[1.2] max-w-md">
+                    <h2 className="text-xl xs:text-2xl sm:text-3xl lg:text-[34px] xl:text-[38px] font-normal text-[#151615] tracking-tight leading-[1.25] sm:leading-[1.2] max-w-md">
                       {currentStep === 1 && (
                         <>Start a conversation about freight bookings, customs, or corporate inquiries.</>
                       )}
@@ -262,7 +262,7 @@ Dispatched via ChanLogix Portal (${COMPANY_INFO.email})`;
                     <button
                       type="button"
                       onClick={handlePrev}
-                      className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium text-[#151615]/70 hover:text-forest-moss transition-colors mt-6 sm:mt-10 cursor-pointer w-fit group"
+                      className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium text-[#151615]/70 hover:text-forest-moss transition-colors mt-4 sm:mt-10 cursor-pointer w-fit group"
                     >
                       <CornerUpLeft className="w-4 h-4 stroke-[2] transition-transform group-hover:-translate-x-0.5" />
                       <span>Prev</span>
@@ -284,10 +284,10 @@ Dispatched via ChanLogix Portal (${COMPANY_INFO.email})`;
                           <div
                             key={option}
                             onClick={() => setFormData({ ...formData, requestType: option })}
-                            className="py-5 sm:py-6 flex items-center gap-4 cursor-pointer group border-b border-[#E2E8DC] transition-colors"
+                            className="py-4 sm:py-6 flex items-center gap-3.5 sm:gap-4 cursor-pointer group border-b border-[#E2E8DC] transition-colors"
                           >
                             {/* Radio Circle */}
-                            <div className={`w-[22px] h-[22px] rounded-full border flex items-center justify-center shrink-0 transition-colors ${
+                            <div className={`w-[20px] sm:w-[22px] h-[20px] sm:h-[22px] rounded-full border flex items-center justify-center shrink-0 transition-colors ${
                               isSelected 
                                 ? 'border-forest-moss bg-forest-moss' 
                                 : 'border-[#151615]/30 group-hover:border-forest-moss'
@@ -296,7 +296,7 @@ Dispatched via ChanLogix Portal (${COMPANY_INFO.email})`;
                             </div>
 
                             {/* Option Text */}
-                            <span className={`text-2xl sm:text-3xl lg:text-[32px] font-semibold tracking-tight transition-colors ${
+                            <span className={`text-lg xs:text-xl sm:text-2xl lg:text-[30px] font-semibold tracking-tight transition-colors ${
                               isSelected ? 'text-[#151615]' : 'text-[#151615]/70 group-hover:text-[#151615]'
                             }`}>
                               {option}
@@ -451,10 +451,10 @@ Dispatched via ChanLogix Portal (${COMPANY_INFO.email})`;
               {/* --------------------------------------------------- */}
               {/* BOTTOM ROW: Giant Step Number (Left) & Next Pill (Right) */}
               {/* --------------------------------------------------- */}
-              <div className="flex items-end justify-between mt-12 sm:mt-16 pt-4">
+              <div className="flex items-center sm:items-end justify-between mt-8 sm:mt-16 pt-3 sm:pt-4">
                 
                 {/* Giant Step Counter */}
-                <div className="text-[100px] sm:text-[130px] lg:text-[160px] font-extralight text-[#151615] tracking-tighter select-none leading-none">
+                <div className="text-[56px] xs:text-[72px] sm:text-[110px] lg:text-[150px] font-extralight text-[#151615] tracking-tighter select-none leading-none">
                   {currentStep}<span className="text-forest-moss/70 font-thin">/</span>4
                 </div>
 
@@ -464,10 +464,10 @@ Dispatched via ChanLogix Portal (${COMPANY_INFO.email})`;
                     type="button"
                     onClick={handleNext}
                     disabled={isSubmitting}
-                    className="inline-flex items-center gap-2 px-8 sm:px-9 py-3 sm:py-3.5 rounded-full bg-[#151615] hover:bg-forest-moss text-white text-sm sm:text-base font-medium tracking-wide transition-all shadow-md disabled:opacity-50 cursor-pointer group"
+                    className="inline-flex items-center gap-2 px-5 xs:px-7 sm:px-9 py-2.5 sm:py-3.5 rounded-full bg-[#151615] hover:bg-forest-moss text-white text-xs xs:text-sm sm:text-base font-medium tracking-wide transition-all shadow-md disabled:opacity-50 cursor-pointer group"
                   >
                     <span>{isSubmitting ? 'Transmitting...' : currentStep === 4 ? 'Submit Request' : 'Next'}</span>
-                    <CornerDownRight className="w-4 h-4 stroke-[2.2] transition-transform group-hover:translate-x-0.5 group-hover:translate-y-0.5" />
+                    <CornerDownRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.2] transition-transform group-hover:translate-x-0.5 group-hover:translate-y-0.5" />
                   </button>
                 </div>
 
@@ -475,25 +475,25 @@ Dispatched via ChanLogix Portal (${COMPANY_INFO.email})`;
             </>
           ) : (
             /* SUBMISSION CONFIRMATION VIEW */
-            <div className="text-center py-10 sm:py-14 space-y-4 max-w-xl mx-auto my-auto animate-fadeIn">
+            <div className="text-center py-6 sm:py-14 space-y-4 max-w-xl mx-auto my-auto animate-fadeIn">
               <span className="text-xs font-semibold text-forest-moss uppercase tracking-[0.2em] font-mono">
                 DISPATCH PREPARED
               </span>
-              <h3 className="text-3xl sm:text-4xl font-normal text-[#151615] tracking-tight">
+              <h3 className="text-2xl sm:text-4xl font-normal text-[#151615] tracking-tight">
                 Thank you, {formData.name || 'Partner'}.
               </h3>
-              <p className="text-sm sm:text-base text-[#555A54] leading-relaxed">
+              <p className="text-xs sm:text-base text-[#555A54] leading-relaxed">
                 Your inquiry has been compiled under reference ticket <strong className="text-forest-moss font-semibold">#{submittedTicket}</strong>. Choose your email client to send your request directly to <strong className="text-[#151615] font-semibold">{COMPANY_INFO.email}</strong>:
               </p>
 
               {/* Action buttons */}
-              <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
+              <div className="pt-4 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center justify-center gap-2.5 sm:gap-3">
                 {/* 1. Gmail Web */}
                 <a
                   href={getGmailUrl(submittedTicket)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#EA4335] hover:bg-[#D93025] text-white text-xs sm:text-sm font-semibold transition-colors shadow-md cursor-pointer"
+                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-[#EA4335] hover:bg-[#D93025] text-white text-xs sm:text-sm font-semibold transition-colors shadow-md cursor-pointer"
                 >
                   <Mail className="w-4 h-4" />
                   <span>Send via Gmail (Web)</span>
@@ -502,7 +502,7 @@ Dispatched via ChanLogix Portal (${COMPANY_INFO.email})`;
                 {/* 2. Default Desktop Mail App */}
                 <a
                   href={getMailtoUrl(submittedTicket)}
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-forest-moss hover:bg-forest-mossHover text-white text-xs sm:text-sm font-semibold transition-colors shadow-md cursor-pointer"
+                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-forest-moss hover:bg-forest-mossHover text-white text-xs sm:text-sm font-semibold transition-colors shadow-md cursor-pointer"
                 >
                   <Mail className="w-4 h-4" />
                   <span>Open Mail App (Outlook)</span>
@@ -512,7 +512,7 @@ Dispatched via ChanLogix Portal (${COMPANY_INFO.email})`;
                 <button
                   type="button"
                   onClick={handleCopyInquiry}
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-white hover:bg-[#EEF4E8] text-[#151615] border border-[#DCE4D8] text-xs sm:text-sm font-semibold transition-colors shadow-xs cursor-pointer"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-white hover:bg-[#EEF4E8] text-[#151615] border border-[#DCE4D8] text-xs sm:text-sm font-semibold transition-colors shadow-xs cursor-pointer"
                 >
                   {copiedInquiry ? <Check className="w-4 h-4 text-forest-moss" /> : <Copy className="w-4 h-4" />}
                   <span>{copiedInquiry ? 'Copied' : 'Copy Text'}</span>
@@ -522,7 +522,7 @@ Dispatched via ChanLogix Portal (${COMPANY_INFO.email})`;
                 <button
                   type="button"
                   onClick={handleReset}
-                  className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[#151615] hover:bg-forest-moss text-white text-xs sm:text-sm font-semibold transition-colors shadow-xs cursor-pointer"
+                  className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full bg-[#151615] hover:bg-forest-moss text-white text-xs sm:text-sm font-semibold transition-colors shadow-xs cursor-pointer"
                 >
                   <span>New Request</span>
                   <CornerDownRight className="w-3.5 h-3.5" />
@@ -540,16 +540,16 @@ Dispatched via ChanLogix Portal (${COMPANY_INFO.email})`;
         {/* ========================================================= */}
         {/* COMPANY OPERATIONS & PHYSICAL HUBS INFORMATION            */}
         {/* ========================================================= */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 sm:mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-12">
           
           {/* Operations Email Card */}
-          <div className="p-6 rounded-2xl bg-white border border-[#DCE4D8] shadow-sm flex flex-col justify-between">
+          <div className="p-5 sm:p-6 rounded-2xl bg-white border border-[#DCE4D8] shadow-sm flex flex-col justify-between">
             <div>
               <span className="text-[10px] font-bold uppercase tracking-wider text-forest-moss block mb-1 font-mono">
                 24/7 Operations Desk
               </span>
               <h4 className="text-sm font-bold text-[#151615] mb-1">Central Logistics Email</h4>
-              <p className="text-xs text-[#555A54] mb-4">{COMPANY_INFO.email}</p>
+              <p className="text-xs text-[#555A54] mb-3 break-all">{COMPANY_INFO.email}</p>
             </div>
             <button
               onClick={handleCopyEmail}
@@ -561,7 +561,7 @@ Dispatched via ChanLogix Portal (${COMPANY_INFO.email})`;
           </div>
 
           {/* Chennai Global HQ */}
-          <div className="p-6 rounded-2xl bg-white border border-[#DCE4D8] shadow-sm">
+          <div className="p-5 sm:p-6 rounded-2xl bg-white border border-[#DCE4D8] shadow-sm">
             <span className="text-[10px] font-bold uppercase tracking-wider text-forest-moss block mb-1 font-mono">
               Global Operations Hub
             </span>
@@ -581,7 +581,7 @@ Dispatched via ChanLogix Portal (${COMPANY_INFO.email})`;
           </div>
 
           {/* Tiruchengode Hub */}
-          <div className="p-6 rounded-2xl bg-white border border-[#DCE4D8] shadow-sm">
+          <div className="p-5 sm:p-6 rounded-2xl bg-white border border-[#DCE4D8] shadow-sm">
             <span className="text-[10px] font-bold uppercase tracking-wider text-forest-moss block mb-1 font-mono">
               Regional Express Depot
             </span>

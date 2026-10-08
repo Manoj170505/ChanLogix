@@ -88,10 +88,9 @@ export default function ServicesSection({ onSelectServiceForQuote }) {
           </div>
         </div>
 
+        {/* INTERACTIVE EXPANDABLE CARDS DECK (Hover or Tap to Expand) */}
         {/* ========================================================= */}
-        {/* INTERACTIVE EXPANDABLE CARDS DECK (Hover to Expand)       */}
-        {/* ========================================================= */}
-        <div className="flex flex-col lg:flex-row gap-3 sm:gap-4 lg:h-[560px] items-stretch">
+        <div className="flex flex-col lg:flex-row gap-2.5 sm:gap-4 lg:h-[560px] items-stretch">
           {services.map((service) => {
             const isExpanded = activeId === service.id;
             const IconComponent = service.icon;
@@ -101,10 +100,10 @@ export default function ServicesSection({ onSelectServiceForQuote }) {
                 key={service.id}
                 onMouseEnter={() => setActiveId(service.id)}
                 onClick={() => setActiveId(service.id)}
-                className={`relative rounded-[28px] sm:rounded-[32px] overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] border border-white/20 shadow-lg group ${
+                className={`relative rounded-[22px] sm:rounded-[28px] lg:rounded-[32px] overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] border border-white/20 shadow-lg group ${
                   isExpanded 
-                    ? 'lg:flex-[3.5] min-h-[460px] lg:min-h-0' 
-                    : 'lg:flex-1 min-h-[90px] lg:min-h-0'
+                    ? 'lg:flex-[3.5] min-h-[390px] xs:min-h-[420px] sm:min-h-[460px] lg:min-h-0' 
+                    : 'lg:flex-1 min-h-[72px] sm:min-h-[88px] lg:min-h-0'
                 }`}
               >
                 {/* Background Image with Dark Contrast Gradients */}
@@ -117,14 +116,14 @@ export default function ServicesSection({ onSelectServiceForQuote }) {
                 {/* Ambient Dark Gradients for Crisp Legibility */}
                 <div className={`absolute inset-0 transition-opacity duration-700 ${
                   isExpanded 
-                    ? 'bg-gradient-to-t from-black/90 via-black/50 to-black/35' 
+                    ? 'bg-gradient-to-t from-black/90 via-black/55 to-black/35' 
                     : 'bg-gradient-to-t from-black/85 via-black/45 to-black/30 group-hover:from-black/75'
                 }`} />
 
                 {/* --------------------------------------------------- */}
                 {/* CARD CONTENT                                        */}
                 {/* --------------------------------------------------- */}
-                <div className="relative z-10 w-full h-full p-5 sm:p-7 md:p-8 flex flex-col justify-between overflow-hidden">
+                <div className="relative z-10 w-full h-full p-4 sm:p-7 md:p-8 flex flex-col justify-between overflow-hidden">
                   
                   {/* Top Bar: Number + Tag Badge + Icon */}
                   <div className="flex items-center justify-between gap-2">
@@ -139,12 +138,12 @@ export default function ServicesSection({ onSelectServiceForQuote }) {
                       )}
                     </div>
 
-                    <div className={`w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center transition-colors shrink-0 ${
+                    <div className={`w-7 h-7 sm:w-9 sm:h-9 rounded-full flex items-center justify-center transition-colors shrink-0 ${
                       isExpanded 
                         ? 'bg-forest-moss text-white shadow-md' 
                         : 'bg-white/20 text-white backdrop-blur-md group-hover:bg-white group-hover:text-forest-moss'
                     }`}>
-                      <IconComponent className="w-4 h-4" />
+                      <IconComponent className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     </div>
                   </div>
 
@@ -155,14 +154,14 @@ export default function ServicesSection({ onSelectServiceForQuote }) {
                     <h3 className={`font-black text-white tracking-tight leading-tight drop-shadow-md transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] origin-left ${
                       isExpanded 
                         ? 'text-2xl sm:text-4xl lg:text-5xl mb-2 sm:mb-3' 
-                        : 'text-xs sm:text-sm text-white/90 truncate'
+                        : 'text-sm sm:text-base text-white font-bold truncate'
                     }`}>
                       {service.title}
                     </h3>
 
                     {/* Expanded Detail Content - Fades In with Smooth Delay After Card Expands */}
                     {isExpanded && (
-                      <div className="space-y-3 sm:space-y-4 pt-1 overflow-hidden">
+                      <div className="space-y-2.5 sm:space-y-4 pt-1 overflow-hidden">
                         
                         {/* Description - Fades in smoothly after card expands */}
                         <p className="text-xs sm:text-sm lg:text-base text-gray-200 max-w-xl leading-relaxed font-normal animate-fade-after-expand">
@@ -170,13 +169,13 @@ export default function ServicesSection({ onSelectServiceForQuote }) {
                         </p>
 
                         {/* Feature Badges - Fades in with smooth delay */}
-                        <div className="flex flex-wrap gap-2 animate-fade-after-expand-badges">
+                        <div className="flex flex-wrap gap-1.5 sm:gap-2 animate-fade-after-expand-badges">
                           {service.features.map((feat, i) => (
                             <div 
                               key={i}
-                              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-[11px] sm:text-xs text-white font-medium"
+                              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-[10px] sm:text-xs text-white font-medium"
                             >
-                              <CheckCircle2 className="w-3.5 h-3.5 text-forest-moss shrink-0" />
+                              <CheckCircle2 className="w-3 h-3 text-forest-moss shrink-0" />
                               <span>{feat}</span>
                             </div>
                           ))}
@@ -189,7 +188,7 @@ export default function ServicesSection({ onSelectServiceForQuote }) {
                               e.stopPropagation();
                               onSelectServiceForQuote(service.title);
                             }}
-                            className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-forest-moss hover:bg-forest-mossHover text-white text-xs sm:text-sm font-semibold shadow-lg shadow-forest-moss/30 transition-colors duration-200 cursor-pointer"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-5 py-2.5 rounded-full bg-forest-moss hover:bg-forest-mossHover text-white text-xs sm:text-sm font-semibold shadow-lg shadow-forest-moss/30 transition-colors duration-200 cursor-pointer"
                           >
                             <span>Book {service.title}</span>
                             <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />

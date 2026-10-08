@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --forest-moss: #478501;
+  --black: #000000;
+  --silver: #AFAEAE;
+  --onyx: #151615;
+  --sage-green: #75953E;
+  
+  --gradient-top: linear-gradient(0deg, #478501, #000000, #AFAEAE, #151615, #75953E);
+  --gradient-right: linear-gradient(90deg, #478501, #000000, #AFAEAE, #151615, #75953E);
+  --gradient-brand: linear-gradient(135deg, #478501 0%, #75953E 100%);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+
+  body {
+    background-color: #F8FAF7;
+    color: #151615;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    max-width: 100%;
+    border: none;
+    text-align: left;
+  }
+}
+
+/* Light Theme Glassmorphism & Accents */
+.glass-nav-light {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.radial-grid-light {
+  background-image: radial-gradient(rgba(71, 133, 1, 0.18) 1.2px, transparent 1.2px);
+  background-size: 26px 26px;
+}
+
+.hero-light-gradient {
+  background: radial-gradient(circle at 85% 25%, rgba(71, 133, 1, 0.12) 0%, transparent 50%),
+              radial-gradient(circle at 10% 75%, rgba(117, 149, 62, 0.12) 0%, transparent 45%),
+              #F8FAF7;
+}
+
+/* Invisible Scrollbars across all browsers */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: transparent;
+  display: none;
+}
+
+* {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+*::-webkit-scrollbar {
+  width: 0px !important;
+  height: 0px !important;
+  display: none !important;
+  background: transparent !important;
+}
+
+/* Smooth Delayed Animations for Service Card Expansion */
+@keyframes fadeInAfterExpand {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-after-expand {
+  animation: fadeInAfterExpand 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.42s both;
+}
+
+.animate-fade-after-expand-badges {
+  animation: fadeInAfterExpand 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.54s both;
+}
+
+.animate-fade-after-expand-cta {
+  animation: fadeInAfterExpand 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.66s both;
+}
